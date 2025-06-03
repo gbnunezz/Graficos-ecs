@@ -1,0 +1,140 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #2d3436;
+    padding: 2rem 1rem;
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 2.5rem;
+    color: #2c3e50;
+    letter-spacing: 1px;
+}
+
+canvas {
+    width: 75% !important;
+    height: auto !important;
+    min-height: 320px;
+    max-width: 75%;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto 100px; 
+}
+
+canvas:hover {
+    transform: scale(1.015);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+#graficosContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 4rem;
+    max-width: 1600px;
+    margin: 0 auto 4rem;
+    padding: 2rem;
+    place-items: center; 
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.filtros select {
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #3498db;
+    background-color: #fff;
+    color: #2c3e50;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.filtros select:hover {
+    border-color: #2980b9;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.metricas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2.5rem auto 4rem;
+    max-width: 1000px;
+    padding: 1rem;
+}
+
+.metricas p {
+    background-color: #ffffff;
+    border-left: 6px solid #3498db;
+    padding: 1.2rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    font-weight: 600;
+    min-width: 180px;
+    text-align: center;
+    color: #2c3e50;
+    transition: transform 0.3s ease;
+}
+
+.metricas p:hover {
+    transform: scale(1.03);
+}
+
+
+@media (max-width: 768px) {
+    #graficosContainer {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 3rem;
+    }
+
+    canvas {
+        padding: 1.5rem;
+        border-radius: 16px;
+        margin-bottom: 80px;
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    .filtros {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .filtros select {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .metricas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .metricas p {
+        width: 90%;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Consumo</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Gráficos de Consumo</h1>
+
+    <section class="filtros">
+        <select id="filtroMeses">
+            <option value="3">Últimos 3 meses</option>
+            <option value="6">Últimos 6 meses</option>
+            <option value="9">Últimos 9 meses</option>
+            <option value="12">Último 1 ano</option>
+            <option value="60">Últimos 5 anos</option>
+        </select>
+    </section>
+
+
+    <div class="metricas">
+        <p id="info-total">Total:</p>
+        <p id="info-media">Média:</p>
+        <p id="info-pico">Pico:</p>
+        <p id="info-menor">Menor:</p>
+    </div>
+
+    <canvas id="graficoLinha"></canvas>
+    <canvas id="graficoBarraHorizontal"></canvas>
+    <canvas id="graficoRosca"></canvas>
+    <canvas id="graficoBarras"></canvas>
+
+    <script type="module" src="main.js"></script>
+    <script type="module" src="firebase.js"></script>
+    <script type="module" src="graficos.js"></script>
+
+</body>
+
+</html>
